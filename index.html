@@ -1,17 +1,96 @@
-\documentclass[12pt]{article}
-\usepackage{geometry}
-\geometry{a4paper}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .instructions h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Abstract Submission Form</h1>
+        <form action="https://formspree.io/f/xzzpqyez" method="post">
+            <div class="form-group">
+                <label for="title">Title of the Document</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author's Name</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+                <label for="abstract">Abstract</label>
+                <textarea id="abstract" name="abstract" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
 
-\title{Title of the Document}
-\author{Author's Name}
-
-\begin{document}
-
-\maketitle
-
-\begin{abstract}
-Maximum 400 words....
-\end{abstract}
-
-
-\end{document}
+        <div class="instructions">
+            <h2>How to Set Up Your Form with Formspree</h2>
+            <ol>
+                <li>Visit <a href="https://formspree.io/" target="_blank">Formspree</a> and sign up for an account if you haven't already.</li>
+                <li>Create a new form on Formspree and get your unique form endpoint URL.</li>
+                <li>Ensure your form's <code>action</code> attribute is set to <code>https://formspree.io/f/xzzpqyez</code>.</li>
+                <li>Publish your HTML file on your web server or local environment.</li>
+                <li>Form submissions will be sent to the email address configured in your Formspree account.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
